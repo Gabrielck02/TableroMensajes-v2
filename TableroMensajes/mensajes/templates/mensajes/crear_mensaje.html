@@ -1,0 +1,14 @@
+{% extends 'mensajes/base.html' %}
+
+{% block title %}Crear Mensaje{% endblock %}
+
+{% block content %}
+<h2>Crear un Nuevo Mensaje</h2>
+
+<form method="POST">
+    {% csrf_token %}
+    {{ form.as_p }}  <!-- Mostrar el formulario -->
+    <button type="submit">Enviar Mensaje</button>
+</form>
+
+{% endblock %}
